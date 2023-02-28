@@ -17,7 +17,7 @@ class TestClass:
         lucas = Funcionario(entrada, '11/11/2000', 1111)
         resultado = lucas.sobrenome()  # When
 
-        assert resultado == esperado
+        assert resultado == esperado #then
 
     def test_quando_decrescimo_salario_recebe_100000_e_sobrenome_in_sobrenomes_diretor_retornar_90000(self):
         #sobrenomes = ['Bragança', 'Windsor', 'Bourbon', 'Yamato', 'Al Saud', 'Khan', 'Tudor', 'Ptolomeu']
@@ -26,7 +26,7 @@ class TestClass:
         esperado = 90000 #Given
 
         funcionario_diretor = Funcionario(entrada_nome, '15/11/1965',entrada_salario)
-        funcionario_diretor.decrescimo_salario()
+        funcionario_diretor.decrescimo_salario() #when
         resultado = funcionario_diretor.salario
 
-        assert resultado == esperado
+        assert resultado == esperado #Then
