@@ -18,3 +18,15 @@ class TestClass:
         resultado = lucas.sobrenome()  # When
 
         assert resultado == esperado
+
+    def test_quando_decrescimo_salario_recebe_100000_e_sobrenome_in_sobrenomes_diretor_retornar_90000(self):
+        #sobrenomes = ['Bragança', 'Windsor', 'Bourbon', 'Yamato', 'Al Saud', 'Khan', 'Tudor', 'Ptolomeu']
+        entrada_salario = 100000
+        entrada_nome = 'Paulo Bragança'
+        esperado = 90000 #Given
+
+        funcionario_diretor = Funcionario(entrada_nome, '15/11/1965',entrada_salario)
+        funcionario_diretor.decrescimo_salario()
+        resultado = funcionario_diretor.salario
+
+        assert resultado == esperado
