@@ -33,6 +33,18 @@ class TestClass:
 
         assert resultado == esperado #Then
 
+    def test_quando_decrescimo_salario_recebe_100000_e_sobrenome_not_in_sobrenomes_diretor_retornar_90000(self):
+        #sobrenomes = ['Bragança', 'Windsor', 'Bourbon', 'Yamato', 'Al Saud', 'Khan', 'Tudor', 'Ptolomeu']
+        entrada_salario = 100000
+        entrada_nome = 'Mario Bigai'
+        esperado = 100000 #Given
+
+        funcionario_diretor = Funcionario(entrada_nome, '15/11/1965',entrada_salario)
+        funcionario_diretor.decrescimo_salario() #when
+        resultado = funcionario_diretor.salario
+
+        assert resultado == esperado #Then
+
     @mark.calcula_bonus
     def test_quando_calcular_salario_recebe_1000_retorna_100(self):
         entrada_salario = 1000
